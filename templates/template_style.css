@@ -1,0 +1,59 @@
+/*-------------
+ 	General styles for elements and such
+-------------*/
+
+*{
+}
+
+html  {
+
+}
+
+body {
+
+}
+
+div {
+}
+
+.container {
+
+}
+
+.row {
+
+}
+
+/*Because we are using bootstrap, the definition of the general column name does not exist.*/
+
+h1,h2,h3,h4,h5 {
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h4 {
+}
+
+h5 {
+}
+
+
+/*-------------------
+Section-specific styles
+---------------------*/
+
+
+
+
+
+
+/*---------------------------
+Device-specific customizations
+------------------------------*/

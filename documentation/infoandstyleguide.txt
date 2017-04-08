@@ -1,0 +1,87 @@
+This is our Standards document and reference
+
+------------------------------- Important Information -----------------------------
+themoviedb.org 
+apikey: 9e47aea3d7ab855ced2fcc031863b928
+	
+apireadaccesstoken: 
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5ZTQ3YWVhM2Q3YWI4NTVjZWQyZmNjMDMxODYzYjkyOCIsInN1YiI6IjU4ZDYwNjgxOTI1MTQxMWZhYTAzODVjMyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.PTBVAKtYYk-1I-jhx1RzX7MN7Ue9emEBA2ilDTRfjjE
+
+Sample api requisition:
+https://api.themoviedb.org/3/movie/550?api_key=9e47aea3d7ab855ced2fcc031863b928
+
+
+https://api.themoviedb.org/3/movie/550?api_key=9e47aea3d7ab855ced2fcc031863b928
+
+
+
+
+https://indico.io/dashboard/
+apikey: 61cb69fcfa24357a37c920ee85cc3374
+
+ 
+
+
+
+------------------------ global variables -    -----------------------
+
+
+
+
+
+
+
+
+----------------------------- Objects - file ------------------------
+
+
+
+
+
+
+
+--------------------  Coding conventions and style guide (mostly stolen from Google's standard)-------------------
+General Rules:
+  Indentation: 2 tab distance indentation to denote hierarchy and nesting.
+  Closing things:  If it take more than one line to get from open to close, put the close on a separate line.
+  Underscores and hypens: avoid them if possible.  hyphens actually mean something sometimes. (data-silly attribute)
+
+Comments:
+    Page or Class level: a comment should denote the general reason for existence.
+
+    Functions: Above each function, describing quickly what it does, inputs and outputs. If it leads to other functions, note those.  (That actually may come in handy for dependencies).
+
+    After complicated lines of code:  If you think someone may not immediately get what it does, comment after the line.
+
+Variables:
+    Format: camelCase
+    Length: long enough to the gist of what it is.  Not so long as to annoy people typing it.
+    Globals: Generally avoid global variables when it is possible to be supplanted by a return or parameter.
+    1 letter:  One letter variables should only be used when local and very temporarily, such as for loops.  Maybe for key value parameters too?  function(k, v){}?
+    Global variables should be declared above to ensure we don't write over eachother.
+
+    *Shawn's personal note:  I am not always sure when a word has innate value.  the latest incarnation of that was "data-"  So, in order to ensure that a variable is arbitrary, I add "the" at the beginning.  Like: theArray.  Just my own thing.  take it or leave it.
+
+     -
+Objects:
+  Format: WhateverThisCaseWouldBe
+  When: Whenever anything more than two significant attributes, it should be declared an object.  Arrays will mean nothing to people after that.
+  Scope: More accepted than globals
+  Blank Line: skip a line after the object is closed
+
+
+Functions:
+    Format: camelCase
+    Content scope: each function should have one main task so that we can reuse them if needed.
+    Nesting: Functions should not be written nested unless they are within the syntax of another, such as a setTimeOut or Ajax call.  Use calls with parameters and return values in functions to do this
+    Blank Line: Skip a line after a function ends.
+    Parameters: they say should be camelCase, but I always make them lowercase.  I'll go with whatever.  short.
+
+
+Rules:
+Objects: SampleObject
+  1. Make objects global.  Limit global variables.  (I honestly don't know why, but it seems to be a thing.)
+  2. One main action per function so that it may be called and reused by others.
+  3. If something has more than one important attribute, make an object.
+  4. Put a comment line above each function that describes what it does, where it gets inputs and where it sends its outputs.
+  5.  Document all objects with how they look

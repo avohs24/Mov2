@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<!--  This template contains the the jquery connection and bootstrap css and javascript to
+pretty much to anything either can handle.  Remove this comment when necessary.
+  -->
+
+  <title>MovMe</title>
+
+<!--jQuery-->
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+	</script>
+
+<!--Bootstrap javascript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!--Stylesheets -->
+    <!-- Bootstrap css -->
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Local css -->
+	<link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/style.css" rel="stylesheet" type="text/css">
+	<link href="assets/css/speech-input.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+		<div class="container">
+
+    	<div id="navigation">
+        	 <!--Navigation-->
+                <ul>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+        </div>
+                        <div id="main">
+
+                            <div id="header">
+                    <!--Main Content area-->
+                            </div>
+                            <div id="content">
+	                           	  <img id="img-left" class="img-one" src="assets/images/OCD8UW0.jpg" alt="Smiling Woman"><p>Had a rough day? Had an awesome day? Don't feel like going out on a Friday night? Would you rather stay in and watch movie but you're unsure of what you want to watch? Let us help you decide? <br><br>Just give us a brief description on how you're feeling below, and we'll make some recommendations for you based on those emotions. Sounds pretty simple right? It is!</p> <br><br><br><br><br>
+	                              <hr class="red">
+	                              <div  id="emosig">
+
+                                </div>
+	                              <h3>How was your day today?
+	                              </h3>
+	                        <!--User input information-->
+	                 			 <div class="row">
+	                 			 	<div class="col-md-4">
+										  <form>
+							 				<input id="input-style" type="text" class="speech-input form-control spacing" placeholder="Please enter brief description">
+							 			  </form>
+							 			  <p>
+											<button id="button-bg" class="btn btn-primary btn-large" href="#">MovMe</button>
+										  </p>
+							 		</div>
+							 		<div class="col-md-4">
+										  <form>
+										  	<input type="radio" name="movie-selection" checked value="correct-movie">&nbsp;&nbsp;Keep my mood selection<br>
+										  	<input type="radio" name="movie-selection" value="incorrect-movie">&nbsp;&nbsp;Change my mood selection<br>
+										  </form>
+										  <p>
+											<button id="button-bg" class="btn btn-primary btn-large spacing" href="#">MovMe Again</button>
+										  </p>
+									</div>
+									<div class="col-md-4">
+											<div class="container">
+											  <div class="donut-chart-block block">
+												    <div class="donut-chart">
+													      <div id="section1" class="clip">
+													        <div class="item" data-rel="21"></div>
+													      </div>
+													      <div id="section2" class="clip">
+													        <div class="item" data-rel="39"></div>
+													      </div>
+													      <div id="section3" class="clip">
+													        <div class="item" data-rel="31"></div>
+													      </div>
+													      <div id="section4" class="clip">
+													        <div class="item" data-rel="9"></div>
+													      </div>
+													      <div id="section5" class="clip">
+													        <div class="item" data-rel="18"></div>
+													      </div>
+												      <div class="center"></div>
+												    </div>
+												  </div>
+											</div>
+									</div>
+								</div>
+							<!--Section where movie results will be listed-->
+								 <hr class="red">
+								 <h3>
+								 	Grab a snack and enjoy one of these amazing selections chosen just for YOU!
+								 </h3>
+								 <div id="movie-selection">
+								 </div>
+
+                            </div>
+                            <div id="footer">
+                            </div>
+
+                        </div>
+
+    </div>
+
+<!--- Local JavaScript Link and Code -->
+		<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+      <script src="assets/javascript/app.js"></script> -->
+        <script src="assets/javascript/speech-input.js"></script>
+
+
+
+</body>
+</html>

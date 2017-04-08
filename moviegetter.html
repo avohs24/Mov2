@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moviegetter</title>
+    <!--- jQuery  -------------------------------------------------->
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+    </script>
+  </head>
+  <body>
+    <div id="theResults"></div>
+
+      <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+          <!-- JavaScript Link and Code ------------------------------------------>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyB3cKe_KGVOsgTIkr6lSiszMiczU0PNYSM",
+          authDomain: "movme-92cb7.firebaseapp.com",
+          databaseURL: "https://movme-92cb7.firebaseio.com",
+          projectId: "movme-92cb7",
+          storageBucket: "movme-92cb7.appspot.com",
+          messagingSenderId: "314238857658"
+        };
+        firebase.initializeApp(config);
+      </script>
+      <script>
+      var database = firebase.database();
+      $(document).ready(function() {
+// ------- Objects for importing ------
+        var genre = {
+          genreId: 0,
+          genreName: ""
+        };
+
+        var theMovie = {
+          movieId : 0,
+          movieName: "",
+          movieDescription: "",
+          movieGenres: [],
+          movieImage: "",
+        }
+
+
+// --------- This function queries the movie site and gets all possible genres and their id's
+// --------- It loops through them and puts them into our database.
+// --------- It then makes an array of them and sends it to the function that gets the movies associated.
+        function getObjectGenresIdsWithAjax() {
+          console.log("got to the first function")
+          var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://api.themoviedb.org/3/genre/movie/list?language=en-US&api_key=9e47aea3d7ab855ced2fcc031863b928",
+            "method": "GET",
+            "headers": {},
+            "data": "{}"
+          }
+          $.ajax(settings).done(function(response) {
+            var genreObjectArray = response.genres;
+            console.log(JSON.stringify(genreObjectArray));
+            console.log(typeof genreObjectArray);
+            console.log(genreObjectArray.length);
+            // this part pushes the genres to the database
+            $.each(genreObjectArray, function(x) {
+              genre.genreId = genreObjectArray[x].id;
+              genre.genreName = genreObjectArray[x].name;
+              database.ref('genres').push({genre});
+            });
+            var theArrayGenreIds = [];
+            for (var i = 0; i < genreObjectArray.length; i++) {
+              theArrayGenreIds.push(genreObjectArray[i]["id"]); // I should now have the genre Ids alone in an array.
+            }
+          getMoviesfromArrayIDs(theArrayGenreIds)
+        })
+      }
+// --------  This starts everything.
+      getObjectGenresIdsWithAjax();
+    })
+      </script>
+  </body>
+</html>

@@ -1,0 +1,371 @@
+html {
+	background-color: #666;
+}
+
+body {
+	background-color: #666;
+	background-image: url("../images/movme2.png");
+	background-repeat: no-repeat;
+	background-position: right;
+
+
+}
+
+#navigation {
+	padding-top: 20px;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 10%;
+    background-color: #666;
+    height: 50%;
+    position: fixed;
+    overflow: auto;
+}
+
+li {
+	color: #fff;
+	font-size: larger;
+
+}
+
+li a {
+	display: block;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #fff;
+}
+
+a:active {
+	background-color: #ccc;
+	color: #5a0d0d;
+}
+
+a:hover {
+	background-color: #a9a9a9;
+	color: #000;
+}
+
+
+
+#main {
+	width: 820px;
+	height: 900px;
+	background-color: #fff;
+	margin: 0 auto;
+	border-radius: 5px;
+	border-top: 10px solid #C33;
+	border-bottom: 10px solid #C33;
+
+}
+
+#content {
+	position: absolute;
+	top: 50px;
+	padding: 5px;
+	width: 820px;
+
+}
+
+#logo {
+	color: #fff;
+	font-weight: bold;
+	font-size: xx-large;
+
+
+}
+
+.img-one {
+	width: 300px;
+	height: 200px;
+	margin-right: 10px;
+
+}
+
+.img-two {
+	width: 200px;
+	height: 150px;
+	margin-right: 10px;
+
+}
+
+.img-three {
+	width: 400px;
+	height: 200px;
+	margin-right: 10px;
+
+}
+
+#img-left {
+	float: left;
+
+}
+
+#img-right {
+	float: right;
+}
+
+hr.red {
+	border-top: 1px solid #c33;
+}
+
+#input-style {
+	width: 300px;
+}
+
+.spacing {
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+#button-bg {
+	background-color: #ccc;
+	border: 1px solid #fff;
+	color: #000;
+
+}
+
+h3 {
+	font-size: larger;
+
+}
+
+h2 {
+	font-size: 2em;
+
+}
+#movie-selection {
+	width: 820px;
+
+
+}
+
+/*Media Screens*/
+
+/*For min-width 1609px*/
+
+@media only screen and (min-width: 1609px) {
+	#main {
+		width: 1000px;
+
+	}
+
+	#content {
+		width: 1000px;
+		top: 70px;
+	}
+
+	ul {
+		list-style-type: none;
+	    margin: 0 auto;
+	    overflow: hidden;
+	    width: 400px;
+	    height: 30px;
+	    position: absolute;
+	}
+
+	li {
+		display: inline-block;
+		float: left;
+		color: #fff;
+		font-size: larger;
+
+	}
+
+	li a {
+	display: block;
+	}
+
+	#navigation {
+	padding-bottom: 30px;
+	width: 400px;
+	height: 50px;
+	margin: 0 auto;
+	list-style: none;
+	}
+
+
+}
+
+/*For max-width 1200px*/
+
+@media only screen and (max-width: 1200px) {
+	#main {
+		width: 620px;
+
+	}
+
+	#content {
+		width: 620px;
+		top: 70px;
+	}
+
+	ul {
+		list-style-type: none;
+	    margin: 0 auto;
+	    overflow: hidden;
+	    width: 400px;
+	    height: 30px;
+	    position: absolute;
+	}
+
+	li {
+		display: inline-block;
+		float: left;
+		color: #fff;
+		font-size: larger;
+
+	}
+
+	li a {
+	display: block;
+	}
+
+	#navigation {
+	padding-bottom: 30px;
+	width: 400px;
+	height: 50px;
+	margin: 0 auto;
+	list-style: none;
+	}
+
+}
+
+/*For max-width 768px*/
+
+@media only screen and (max-width: 768px) {
+	body {
+		background-image: none;
+
+	}
+
+	#main {
+		width: 620px;
+
+	}
+
+	#content {
+		width: 620px;
+		top: 70px;
+	}
+
+	#img-right {
+		float: left;
+	}
+
+	ul {
+		list-style-type: none;
+	    margin: 0 auto;
+	    overflow: hidden;
+	    width: 400px;
+	    height: 30px;
+	    position: absolute;
+	}
+
+	li {
+		display: inline-block;
+		float: left;
+		color: #fff;
+		font-size: larger;
+
+	}
+
+	li a {
+	display: block;
+	}
+
+	#navigation {
+	padding-bottom: 30px;
+	width: 400px;
+	height: 50px;
+	margin: 0 auto;
+	list-style: none;
+	}
+}
+
+/*For max-width 660px*/
+
+@media only screen and (max-width: 660px) {
+
+	#main {
+		width: 480px;
+	}
+
+	#content {
+		width: 480px;
+		top: 70px;
+	}
+
+
+	ul {
+		list-style-type: none;
+	    margin: 0 auto;
+	    overflow: hidden;
+	    width: 400px;
+	    height: 30px;
+	    position: absolute;
+	}
+
+	li {
+		display: inline-block;
+		float: left;
+		color: #fff;
+		font-size: larger;
+
+	}
+
+	li a {
+	display: block;
+	}
+
+	#navigation {
+	padding-bottom: 30px;
+	width: 400px;
+	height: 50px;
+	margin: 0 auto;
+	list-style: none;
+	}
+
+	.img-three {
+	width: 450px;
+	height: 200px;
+	margin-right: 10px;
+
+}
+}
+
+/*For max-width 480px*/
+@media only screen and (max-width: 480px) {
+	body {
+		background-image: none;
+
+	}
+
+	#main {
+		width: 340px;
+	}
+
+	#content {
+		width: 340px;
+	}
+
+	#img-right {
+		float: left;
+	}
+
+	#main {
+		height: 1200px ;
+	}
+
+	.img-three {
+		width: 300px;
+		height: 200px;
+		margin-right: 10px;
+
+}
+
+}
